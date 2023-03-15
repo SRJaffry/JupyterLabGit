@@ -1,0 +1,83 @@
+
+Start from the following link: https://towardsdatascience.com/git-in-4-minutes-f0252332e68e
+git --version
+
+Other helpful item on web: https://towardsdatascience.com/how-git-truly-works-cd9c375966f6
+
+git config --global user.name "shan jaffry"
+git config --global user.email "shan_jaffry@dellteam.com"
+git config --global core.editor "code"
+
+# repository can be found on the git web version. 
+
+# Initialisation
+# Make sure you are in the root directory of your project and then type.
+
+git init
+
+# adding files
+# You now have a git repository in which you can add files to with:
+git add file.txt
+
+# And once you’ve added a file you can check the status of your files with
+git status
+
+# In case you see On branch master Changes to be committed:....
+# This means that you have one new file in the staging area. 
+# This is effectively a loading bay. Files sit here until you ‘commit’ them.
+
+# commit changes
+git commit -m "<any message you want that describes your commit>"
+
+git log
+
+# To upload the code on the URL
+git push origin main
+
+# git push --force origin main (to force the push)
+
+(Sometime this may give us the SSL error, we can shut down the SSL using the command in teh following)
+https://confluence.atlassian.com/fishkb/unable-to-clone-git-repository-due-to-self-signed-certificate-376838977.html
+https://confluence.atlassian.com/bitbucketserverkb/resolving-ssl-self-signed-certificate-errors-806029899.html
+
+git config --global http.sslVerify false
+
+#How to add origin:
+git remote add origin URL.git
+
+# To show origin
+git remote show origin
+
+# To remove origin
+git remove rm origin
+
+
+Related to Gitignore:
+https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/#:~:text=gitignore%20file%20is%20a%20text,all%20of%20your%20Git%20repositories.
+
+
+About branch:
+# Check the branch
+git branch (enter)
+
+# Change the branch (along with creating it)
+git checkout -b feature-ticketnumber
+
+# Git checkout actually changes the branch. But in the above case, sinc ethe branch does not exist, it will create it as well.
+
+git checkout main
+git checkout feature-ticketnumber
+
+# So for example, if I am in the feature-ticketnumber and made chenges to the code, add and commit it to the Git. This will only appear on the 'feature-ticketnumber' branch and not on the 'main' branch. This is very useful.
+
+# When, for example, I am satisfied with my feature integration, then I can merge the branches to the main again. (git merge)
+
+But, before merging it is better to compare the two versions of the features. This we do using "git diff"
+
+git diff
+
+I was watching Youtube video: https://www.youtube.com/watch?v=RGOj5yH7evk
+I left at 42 minute on 26 May 2022
+
+# Undo git add: (https://forum.freecodecamp.org/t/how-to-undo-a-git-add-with-git-reset/13237)
+ git reset <file> or git reset

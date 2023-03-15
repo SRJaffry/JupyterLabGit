@@ -1,0 +1,56 @@
+	This is the cleaner version:
+
+---------------From the Git page of dummy repo----------
+
+echo "# dummy" >> README.md
+git init
+git add README.md 
+# git add file1, file 2 (or git add . )
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://eos2git.cec.lab.emc.com/shan-jaffry/dummy.git
+git push -u origin main
+# git status #This will show us the status of th
+
+URL:
+https://gist.github.com/cblunt/860360
+
+---------------Remove a file from remote repository------------------------------
+How to remove a file from remote repository (https://stackoverflow.com/questions/2047465/how-can-i-delete-a-file-from-a-git-repository)
+
+git rm file1.txt
+git commit -m "I am removing file1.txt"
+git push origin branch_name
+
+---------------How to pull a single remote repository------------------------------
+
+First see the link below for a pictorial understanding
+https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch
+
+Let's see I want to pull the file main.scss from my remote repo.
+First, check that I'll land myself on the right branch, then check the remote repo using (git remote -v), then fetch all the files from there. 
+Finally, git checkout.
+
+git branch  
+git remote -v  
+git fetch --all  
+git checkout origin/main -- src/scss/main.scss
+
+
+
+---- How to push new changes to remote reposirtyr---
+
+# first run 'git status' to check the status
+# use "git add ." (or specific filename in place of dot)
+# For the 'Changes not staged for comit' we have files that are already added to the track, but new changes have been made and we need to commit those changes
+commit -m 'message'
+
+
+git status
+vim <filename> # Example changes made in the file
+git add . #(for filename)
+git commit -m "message"
+git status
+git fetch --all # It is always a good practice to pull everything from remote before pushing it.
+git push -u origin main
+
