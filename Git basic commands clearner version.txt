@@ -3,7 +3,8 @@
 ---------------From the Git page of dummy repo----------
 
 echo "# dummy" >> README.md
-git init
+git config --global user.email "syedshan85@gmail.com"
+git init           # The git init command creates a new Git repository.
 git add README.md 
 # git add file1, file 2 (or git add . )
 git commit -m "first commit"
@@ -36,6 +37,12 @@ git remote -v
 git fetch --all  
 git checkout origin/main -- src/scss/main.scss
 
+
+
+------------ pull from remote repo to local repo, and upload the local files to remote--------------
+# following all above, like commit, etc etc...
+git pull --rebase origin main
+git push origin main
 
 
 ---- How to push new changes to remote reposirtyr---
