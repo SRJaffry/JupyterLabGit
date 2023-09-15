@@ -52,7 +52,6 @@ git push origin main
 # For the 'Changes not staged for comit' we have files that are already added to the track, but new changes have been made and we need to commit those changes
 commit -m 'message'
 
-
 git status
 vim <filename> # Example changes made in the file
 git add . #(for filename)
@@ -60,4 +59,11 @@ git commit -m "message"
 git status
 git fetch --all # It is always a good practice to pull everything from remote before pushing it.
 git push -u origin main
+
+---- In the gitbash, how can I change the name of my master branch into main--------------
+
+git branch main      # Create a new branch named "main"
+git checkout main   # Switch to the new "main" branch
+git push -u origin main   # Push the "main" branch and set it as the upstream branch
+git branch -d master   # Delete the local "master" branch
 
